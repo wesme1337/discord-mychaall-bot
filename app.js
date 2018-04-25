@@ -13,8 +13,8 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 			let channel = client.channels.find('name', 'The bois');
 			channel.join().then(connection => {
 					let audioFile = 'mychaall' + (Math.floor(Math.random() * 4) + 1) + '.mp3';
-			    const dispatcher = connection.playFile(audioFile);
-			    dispatcher.on('end', () => connection.disconnect());
+					const dispatcher = connection.playFile(audioFile);
+					dispatcher.on('end', () => connection.disconnect());
 			});
 		}
 	}
